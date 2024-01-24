@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class AccessCheckAspect {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Before("execution(* com.AOPPractice.AOPPrep.*.*(..))")
+    @Before("execution(String com.AOPPractice.AOPPrep.*.*(..))")
     public void before(JoinPoint joinPoint) {
         //	logger.info("Intercepted method call");
         logger.info("Intercepted call before execution of: {}", joinPoint);
